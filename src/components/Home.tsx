@@ -22,10 +22,10 @@ const Home = () => {
         on the Amazon AWS platform.
       </article>
       <div className="space-x-5">
-        <button className="border-2 bg-zinc-50 zinc-900 py-4 px-8 font-semibold text-xl rounded-full hover:bg-zinc-900 hover:text-zinc-100 ">
+        <button className="border-2 bg-zinc-200 text-zinc-800 py-4 px-8 font-semibold text-xl rounded-full hover:bg-zinc-50 hover:text-zinc-900 ">
           Entre em contato
         </button>
-        <button className="border-2 text-zinc-50 py-4 px-8 font-semibold text-xl rounded-full hover:bg-zinc-100 hover:text-zinc-800">
+        <button className="border-2 border-zinc-300 text-zinc-300 py-4 px-8 font-semibold text-xl rounded-full  hover:text-zinc-50 hover:border-zinc-50">
           Download CV
         </button>
       </div>
