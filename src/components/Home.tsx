@@ -10,7 +10,7 @@ const Home = () => {
         />
       </figure>
       <h1 className="text-zinc-50 font-extrabold text-5xl text-center">
-        Olá, me chamo Luís Felipe e sou desenvolvedor{" "}
+        Olá, me chamo Luís Felipe e sou desenvolvedor
         <strong className="bg-gradient-to-tl to-amber-500 from-fuchsia-600 bg-clip-text text-transparent">
           Frontend!
         </strong>
