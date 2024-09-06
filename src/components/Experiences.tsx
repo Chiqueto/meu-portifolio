@@ -44,7 +44,7 @@ const Experiences = () => {
       <h2 className="text-center text-zinc-400 font-semibold text-xl uppercase tracking-widest">
         Experiência com
       </h2>
-      <ul className="flex flex-row flex-wrap gap-14 items-center justify-center mx-auto max-w-[40%]">
+      <ul className="flex flex-row flex-wrap md:gap-14 items-center justify-center mx-auto md:max-w-[40%] max-w-[90%] gap-7">
         {myExperiences.map((experience) => (
           <li className="flex flex-col items-center justify-center">
             {experience.image}
