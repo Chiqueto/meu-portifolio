@@ -9,11 +9,11 @@ const Home = () => {
           width={"216px"}
         />
       </figure>
-      <h1 className="text-zinc-50 font-extrabold md:text-5xl text-2xl text-balance text-center">
+      <h1 className="text-zinc-50 font-extrabold md:text-5xl text-2xl text-balance text-center ">
         Olá, me chamo Luís Felipe e sou desenvolvedor
-        <br />
         <strong className="bg-gradient-to-tl to-amber-500 from-fuchsia-600 bg-clip-text text-transparent">
-          Frontend!
+          {" "}
+          Frontend
         </strong>
       </h1>
       <article className="text-zinc-400 text-justify text-pretty text-lg">
@@ -22,11 +22,11 @@ const Home = () => {
         expertise lies in crafting robust and scalable SaaS-based architectures
         on the Amazon AWS platform.
       </article>
-      <div className="space-x-3">
-        <button className="border-2 bg-zinc-200 text-zinc-800 py-4 px-3 font-semibold text-lg rounded-full hover:bg-zinc-50 hover:text-zinc-900 ">
+      <div className="space-x-3 md:space-x-5">
+        <button className="border-2 bg-zinc-200 text-zinc-800 md:px-6 py-4 px-3 font-semibold text-lg rounded-full hover:bg-zinc-50 hover:text-zinc-900 ">
           Entre em contato
         </button>
-        <button className="border-2 border-zinc-300 text-zinc-300 py-4 px-3  font-semibold text-lg rounded-full  hover:text-zinc-50 hover:border-zinc-50">
+        <button className="border-2 border-zinc-300 text-zinc-300 py-4 md:px-6 px-3  font-semibold text-lg rounded-full  hover:text-zinc-50 hover:border-zinc-50">
           Download CV
         </button>
       </div>
