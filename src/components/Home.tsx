@@ -1,6 +1,6 @@
 const Home = () => {
   return (
-    <section className="flex flex-col justify-center items-center mt-24 mx-auto sm:px-28 2 gap-10 mb-20 px-5 max-w-screen-lg">
+    <section className="flex flex-col justify-center items-center mt-24 mx-auto sm:px-28 gap-10 mb-20 px-5 max-w-screen-lg">
       <figure>
         <img
           className="rounded-full"
