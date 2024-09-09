@@ -4,7 +4,7 @@ import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
 import { SiTypescript } from "react-icons/si";
 import { TbSql } from "react-icons/tb";
 
-const Experiences = () => {
+const Knowlodges = () => {
   const myExperiences = [
     {
       name: "JavaScript",
@@ -44,7 +44,7 @@ const Experiences = () => {
       <h2 className="text-center text-zinc-400 font-semibold text-xl uppercase tracking-widest">
         Experiência com
       </h2>
-      <ul className="flex flex-row flex-wrap md:gap-14 items-center justify-center mx-auto md:max-w-[40%] max-w-[90%] gap-7">
+      <ul className="flex flex-row flex-wrap sm:gap-14 items-center justify-center mx-auto sm:max-w-screen-sm max-w-[90%] gap-7">
         {myExperiences.map((experience) => (
           <li className="flex flex-col items-center justify-center">
             {experience.image}
@@ -56,4 +56,4 @@ const Experiences = () => {
   );
 };
 
-export default Experiences;
+export default Knowlodges;
