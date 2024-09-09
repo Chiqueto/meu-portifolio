@@ -4,16 +4,16 @@ const Header = () => {
       <img src="" alt="" />
       <ul className="font-semibold text-zinc-50 text-sm flex flex-row md:gap-16 gap-8 justify-center items-center">
         <li>
-          <a href="#">Home</a>
+          <a href="#Home">Home</a>
         </li>
         <li>
-          <a href="#">Projetos</a>
+          <a href="#Projetos">Projetos</a>
         </li>
         <li>
-          <a href="#">Experiência</a>
+          <a href="#Experiencias">Experiência</a>
         </li>
         <li>
-          <a href="#">Contato</a>
+          <a href="#Contato">Contato</a>
         </li>
       </ul>
     </header>

@@ -19,7 +19,10 @@ const Experiences = () => {
   ];
 
   return (
-    <section className="mx-auto text-center max-w-screen-sm mt-24 mb-24">
+    <section
+      id="Experiencias"
+      className="mx-auto text-center max-w-screen-sm mt-24 mb-24"
+    >
       <h1 className="font-extrabold text-4xl leading-tight bg-gradient-to-t to-[#5BADFF]  from-[#1373D1] bg-clip-text text-transparent">
         Experiência
       </h1>
