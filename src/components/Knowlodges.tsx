@@ -3,6 +3,7 @@ import { FaNodeJs } from "react-icons/fa";
 import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
 import { SiTypescript } from "react-icons/si";
 import { TbSql } from "react-icons/tb";
+import Badge from "./badge";
 
 const Knowlodges = () => {
   const myExperiences = [
@@ -46,10 +47,11 @@ const Knowlodges = () => {
       </h2>
       <ul className="flex flex-row flex-wrap sm:gap-14 items-center justify-center mx-auto sm:max-w-screen-sm max-w-[90%] gap-7">
         {myExperiences.map((experience) => (
-          <li className="flex flex-col items-center justify-center">
-            {experience.image}
-            <p className="text-zinc-200 text-center">{experience.name}</p>
-          </li>
+          <Badge
+            key={experience.name}
+            image={experience.image}
+            name={experience.name}
+          />
         ))}
       </ul>
     </section>

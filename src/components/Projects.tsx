@@ -1,4 +1,4 @@
-import { ArrowUpRightIcon } from "lucide-react";
+import ProjectCard from "./ProjectCard";
 
 const Projects = () => {
   const myProjects = [
@@ -12,6 +12,11 @@ const Projects = () => {
       image: "plann.er.png",
       link: "https://www.example.com",
     },
+    {
+      name: "To do List",
+      image: "todo.png",
+      link: "https://www.linkedin.com/posts/luis-felipe-chiqueto_nodejs-express-mongodb-activity-7239307696338800640-95C-?utm_source=share&utm_medium=member_desktop",
+    },
   ];
 
   return (
@@ -24,28 +29,12 @@ const Projects = () => {
       </h1>
       <div className="sm:flex sm:flex-wrap sm:flex-1 sm:justify-center sm:items-center sm:gap-x-7">
         {myProjects.map((project) => (
-          <div className="sm:w-72 w-60 mt-7 mb-10 sm:mb-0">
-            <div className="h-44">
-              <img
-                src={project.image}
-                alt={project.name}
-                className="rounded-t-2xl object-fill"
-              />
-            </div>
-            <div className="relative bg-neutral-800 pr-4 pl-6 py-3 flex justify-between items-center rounded-b-2xl">
-              <div>
-                <p className="font-extrabold text-xs text-zinc-50 text-opacity-80">
-                  Clique aqui para visitar
-                </p>
-                <p className="font-extrabold text-xl text-zinc-50">
-                  {project.name}
-                </p>
-              </div>
-              <a href={project.link}>
-                <ArrowUpRightIcon className="text-zinc-50" />
-              </a>
-            </div>
-          </div>
+          <ProjectCard
+            key={project.name}
+            image={project.image}
+            name={project.name}
+            link={project.link}
+          />
         ))}
       </div>
     </section>
