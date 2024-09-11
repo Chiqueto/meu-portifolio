@@ -3,7 +3,7 @@ import { FaNodeJs } from "react-icons/fa";
 import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
 import { SiTypescript } from "react-icons/si";
 import { TbSql } from "react-icons/tb";
-import Badge from "./badge";
+import Badge from "./Badge";
 
 const Knowlodges = () => {
   const myExperiences = [

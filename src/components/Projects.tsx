@@ -1,23 +1,62 @@
+import { ReactNode, useEffect, useState } from "react";
 import ProjectCard from "./ProjectCard";
+import ProjectVideo from "./ProjectVideo";
 
 const Projects = () => {
   const myProjects = [
     {
       name: "FSW-Barber",
       image: "fsw-barber.png",
-      link: "https://www.example.com",
+      link: "#",
     },
     {
       name: "Plann.er",
       image: "plann.er.png",
-      link: "https://www.example.com",
+      link: "#",
     },
     {
       name: "To do List",
       image: "todo.png",
       link: "https://www.linkedin.com/posts/luis-felipe-chiqueto_nodejs-express-mongodb-activity-7239307696338800640-95C-?utm_source=share&utm_medium=member_desktop",
+      video: (
+        <iframe
+          className="mx-auto w-[320px] h-[180px] sm:w-[720px] sm:h-[405px]"
+          src="https://www.linkedin.com/embed/feed/update urn:li:ugcPost:7239307519758663680?compact=1"
+          title="Publicação incorporada"
+        />
+      ),
     },
   ];
+
+  interface ProjectDataProps {
+    title: string;
+    video: ReactNode;
+  }
+
+  const [isProjectVideoOpen, setProjectVideoOpen] = useState(false);
+
+  const [projectData, setProjectData] = useState<ProjectDataProps>();
+
+  function openProjectvideo(data: ProjectDataProps) {
+    setProjectData(data);
+    setProjectVideoOpen(true);
+  }
+
+  function closeProjectvideo() {
+    setProjectVideoOpen(false);
+  }
+  useEffect(() => {
+    if (isProjectVideoOpen) {
+      document.body.style.overflow = "hidden"; // Bloqueia o scroll
+    } else {
+      document.body.style.overflow = "auto"; // Reativa o scroll
+    }
+
+    // Limpeza ao desmontar o componente
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isProjectVideoOpen]);
 
   return (
     <section
@@ -32,10 +71,20 @@ const Projects = () => {
           <ProjectCard
             key={project.name}
             image={project.image}
-            name={project.name}
+            title={project.name}
             link={project.link}
+            video={project.video}
+            openProjectVideo={openProjectvideo}
           />
         ))}
+        {isProjectVideoOpen && (
+          <ProjectVideo
+            key={projectData?.title}
+            title={projectData?.title}
+            closeProjectVideo={closeProjectvideo}
+            video={projectData?.video}
+          />
+        )}
       </div>
     </section>
   );
