@@ -4,14 +4,14 @@ const Experiences = () => {
       image: "./AltaMogiana2.png",
       title: "Aprendiz em Desenvolvimento de Sistemas",
       description:
-        "As a Senior Software Engineer at Google, I played a pivotal role in developing innovative solutions for Google'score search algorithms. Collaborating with a dynamic team of engineers, I contributed to the enhancement of search accuracy and efficiency, optimizing user experiences for millions of users worldwide.",
+        "Como jovem aprendiz, participei do curso técnico de Desenvolvimento de Sistemas promovido pelo SENAI, além de ser integrado às atividades de T.I. na usina. Essas atividades incluíram desenvolvimento de sistemas, manutenção de sistemas embarcados, suporte à infraestrutura, automação industrial e inovação tecnológica. Essas experiências me permitiram expandir minha visão e conhecimento sobre tecnologia e suas diversas aplicações nas áreas operacionais da usina.",
       duration: "Jan 2023 - Atualmente",
     },
     {
       image: "./Acedata.png",
       title: "Programador estagiário em ACEDATA SOFTWARE",
       description:
-        "As a Senior Software Engineer at Google, I played a pivotal role in developing innovative solutions for Google'score search algorithms. Collaborating with a dynamic team of engineers, I contributed to the enhancement of search accuracy and efficiency, optimizing user experiences for millions of users worldwide.",
+        "Como estagiário, fui responsável por desenvolver correções e melhorias no sistema ERP da empresa, tanto em ambientes Windows quanto Web. Para isso, aprendi a utilizar Genexus, a principal tecnologia empregada no desenvolvimento das soluções. Durante essa experiência, não apenas refinei minha lógica de programação, mas também adquiri habilidades essenciais de trabalho em equipe, aplicando a metodologia ágil SCRUM.",
       duration: "Mar 2023 - Dez 2023",
     },
   ];
