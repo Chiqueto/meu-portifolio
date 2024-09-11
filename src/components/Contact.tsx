@@ -12,11 +12,24 @@ const Contact = () => {
           quae eligendi dicta fugit aliquam quasi explicabo earum doloremque
           recusandae sunt itaque vitae?
         </p>
-        <p className="font-semibold text-zinc-300 flex items-center gap-2 mt-6">
-          <MdEmail /> lfchiqueto@gmail.com
-        </p>
-        <div className="text-zinc-50 flex gap-4 mt-10">
-          <BsInstagram /> <BsLinkedin /> <BsGithub />
+        <a href="mailto:lfchiqueto@gmail.com" className="hover:cursor-pointer">
+          <p className="font-semibold text-zinc-300 flex items-center gap-2 mt-6 hover:underline hover:text-zinc-200">
+            <MdEmail /> lfchiqueto@gmail.com
+          </p>
+        </a>
+        <div className="text-zinc-200 flex gap-4 mt-10 ">
+          <a href="https://instagram.com/lfchiqueto" target="_blank">
+            <BsInstagram className="hover:text-zinc-50" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/luis-felipe-chiqueto-628b8625a/"
+            target="_blank"
+          >
+            <BsLinkedin className="hover:text-zinc-50" />
+          </a>
+          <a href="https://github.com/Chiqueto" target="_blank">
+            <BsGithub className="hover:text-zinc-50" />
+          </a>
         </div>
       </div>
     </footer>
