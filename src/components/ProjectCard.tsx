@@ -8,7 +8,7 @@ interface ProjectCardProps {
 
 const ProjectCard = ({ image, name, link }: ProjectCardProps) => {
   return (
-    <div className="sm:w-2/5 w-full mt-7 mb-10 sm:mb-0 transition-transform duration-300 ease-in-out transform hover:scale-105 ">
+    <div className="sm:w-2/5 w-full mt-7 mb-10 sm:mb-0 transition-transform duration-300 ease-in-out transform hover:scale-105 hover:cursor-pointer">
       <div className="sm:h-52   ">
         <img
           src={image}
