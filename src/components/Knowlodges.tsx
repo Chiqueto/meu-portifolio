@@ -9,35 +9,75 @@ const Knowlodges = () => {
   const myExperiences = [
     {
       name: "JavaScript",
-      image: <DiJavascript size={40} className="text-zinc-200" />,
+      image: (
+        <DiJavascript
+          size={40}
+          className="text-zinc-200 hover:text-zinc-50 transition-transform transform duration-300 ease-in-out"
+        />
+      ),
     },
     {
       name: "React",
-      image: <DiReact size={40} className="text-zinc-200" />,
+      image: (
+        <DiReact
+          size={40}
+          className="text-zinc-200 hover:text-zinc-50 transition-transform transform duration-300 ease-in-out"
+        />
+      ),
     },
     {
       name: "Node.js",
-      image: <FaNodeJs size={40} className="text-zinc-200" />,
+      image: (
+        <FaNodeJs
+          size={40}
+          className="text-zinc-200 hover:text-zinc-50 transition-transform transform duration-300 ease-in-out"
+        />
+      ),
     },
     {
       name: "TypeScript",
-      image: <SiTypescript size={40} className="text-zinc-200" />,
+      image: (
+        <SiTypescript
+          size={40}
+          className="text-zinc-200 hover:text-zinc-50 transition-transform transform duration-300 ease-in-out"
+        />
+      ),
     },
     {
       name: "Next.js",
-      image: <RiNextjsFill size={40} className="text-zinc-200" />,
+      image: (
+        <RiNextjsFill
+          size={40}
+          className="text-zinc-200 hover:text-zinc-50 transition-transform transform duration-300 ease-in-out"
+        />
+      ),
     },
     {
       name: "SQL",
-      image: <TbSql size={40} className="text-zinc-200" />,
+      image: (
+        <TbSql
+          size={40}
+          className="text-zinc-200 hover:text-zinc-50 transition-transform transform duration-300 ease-in-out"
+        />
+      ),
     },
     {
       name: "MongoDB",
-      image: <DiMongodb size={40} className="text-zinc-200" />,
+      image: (
+        <DiMongodb
+          size={40}
+          className="text-zinc-200 hover:text-zinc-50 transition-transform transform duration-300 ease-in-out"
+        />
+      ),
     },
     {
       name: "TailwindCSS",
-      image: <RiTailwindCssFill size={40} className="text-zinc-200" />,
+      image: (
+        <RiTailwindCssFill
+          size={40}
+          className="text-zinc-200 hover:text-zinc-50 transition-transform transform duration-300 "
+        />
+      ),
     },
   ];
   return (
