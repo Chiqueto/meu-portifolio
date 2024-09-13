@@ -1,3 +1,5 @@
+import Work from "./Work";
+
 const Experiences = () => {
   const experiences = [
     {
@@ -26,28 +28,13 @@ const Experiences = () => {
       </h1>
 
       {experiences.map((experience) => (
-        <article className="mt-12 px-5">
-          <div className="flex flex-row justify-between items-center">
-            <div className="flex gap-3 items-center justify-center shrink-1 text-left">
-              <div className="w-12 h-12">
-                <img
-                  src={experience.image}
-                  alt=""
-                  className="object-contain w-full h-full rounded-lg"
-                />
-              </div>
-              <h2 className="font-bold text-zinc-50 text-sm sm:text-xl">
-                {experience.title}
-              </h2>
-            </div>{" "}
-            <p className="text-zinc-400 text-xs sm:text-sm shrink-0">
-              {experience.duration}
-            </p>
-          </div>
-          <p className="text-zinc-400 text-xs sm:text-sm text-justify mt-2">
-            {experience.description}
-          </p>
-        </article>
+        <Work
+          description={experience.description}
+          duration={experience.duration}
+          logo={experience.image}
+          title={experience.title}
+          key={experience.title}
+        />
       ))}
     </section>
   );

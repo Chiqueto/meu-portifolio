@@ -19,16 +19,19 @@ const Home = () => {
           Frontend
         </strong>
       </h1>
-      <article className="text-zinc-400 text-justify sm:text-center text-pretty text-lg">
-        Sou estudante de Engenharia de Software pela UNIFACEF - Franca, tenho 19
-        anos e moro em São Joaquim da Barra. Minha paixão pela área de
-        tecnologia surgiu durante o curso técnico em Desenvolvimento de
-        Sistemas, onde descobri meu interesse por criar soluções inovadoras.
-        Atualmente, estou me especializando em Desenvolvimento Web com React,
-        além de estudar banco de dados e backend. Meu grande sonho é aplicar
-        essas habilidades para desenvolver aplicações voltadas ao mundo do
-        esporte.
-      </article>
+      <div className="flex flex-row gap-5">
+        <article className="text-zinc-400 text-justify sm:text-left pretty text-lg">
+          Sou estudante de Engenharia de Software pela UNIFACEF - Franca, tenho
+          19 anos e moro em São Joaquim da Barra. Minha paixão pela área de
+          tecnologia surgiu durante o curso técnico em Desenvolvimento de
+          Sistemas, onde descobri meu interesse por criar soluções inovadoras.
+          Atualmente, estou me especializando em Desenvolvimento Web com React,
+          além de estudar banco de dados e backend. Meu grande sonho é aplicar
+          essas habilidades para desenvolver aplicações voltadas ao mundo do
+          esporte.
+        </article>
+        <img src="computer.svg" alt="computer" width={250} />
+      </div>
       <div className="flex items-center justify-center gap-x-3 sm:gap-x-5">
         <button className="border-2 bg-zinc-200 text-zinc-800 sm:px-6 py-4 px-3 font-semibold text-lg rounded-full hover:bg-zinc-50 hover:text-zinc-900 ">
           Entre em contato
