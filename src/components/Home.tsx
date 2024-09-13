@@ -19,7 +19,7 @@ const Home = () => {
           Frontend
         </strong>
       </h1>
-      <div className="flex flex-row gap-5">
+      <div className="flex flex-col sm:flex-row gap-5 items-center">
         <article className="text-zinc-400 text-justify sm:text-left pretty text-lg">
           Sou estudante de Engenharia de Software pela UNIFACEF - Franca, tenho
           19 anos e moro em São Joaquim da Barra. Minha paixão pela área de
@@ -30,7 +30,7 @@ const Home = () => {
           essas habilidades para desenvolver aplicações voltadas ao mundo do
           esporte.
         </article>
-        <img src="computer.svg" alt="computer" width={250} />
+        <img src="computer.svg" alt="computer" className="sm:w-[250px] w-52" />
       </div>
       <div className="flex items-center justify-center gap-x-3 sm:gap-x-5">
         <button className="border-2 bg-zinc-200 text-zinc-800 sm:px-6 py-4 px-3 font-semibold text-lg rounded-full hover:bg-zinc-50 hover:text-zinc-900 ">
