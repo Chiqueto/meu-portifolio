@@ -32,10 +32,36 @@ export const ContactUs = () => {
       <h2 className="text-zinc-50 text-center font-bold text-2xl">
         Entre em contato!
       </h2>
-      <label className="text-zinc-50">Name</label>
-      <input type="text" name="name" className="px-1" />
-      <label className="text-zinc-50">Email</label>
-      <input type="email" name="email" className="px-1" />
+
+      <label
+        htmlFor="name"
+        className="block mb-2 text-sm font-medium text-white"
+      >
+        Nome
+      </label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:border-4 focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+        placeholder="Seu nome..."
+        required
+      />
+
+      <label
+        htmlFor="name"
+        className="block mb-2 text-sm font-medium text-white"
+      >
+        Email
+      </label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg ] focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+        placeholder="Seu email..."
+        required
+      />
       <label className="text-zinc-50">Message</label>
       <textarea name="message" className="px-1" />
       <input
