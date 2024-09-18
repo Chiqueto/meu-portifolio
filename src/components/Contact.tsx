@@ -39,10 +39,10 @@ const Contact = () => {
           essas habilidades para desenvolver aplicações voltadas ao mundo do
           esporte.
         </p>
+        <p className="font-semibold text-zinc-300 flex items-center gap-2 mt-6">
+          <MdEmail /> lfchiqueto@gmail.com
+        </p>
         <div onClick={handleOpenContactUs} className="hover:cursor-pointer">
-          <p className="font-semibold text-zinc-300 flex items-center gap-2 mt-6 hover:underline hover:text-zinc-200">
-            <MdEmail /> lfchiqueto@gmail.com
-          </p>
           <p className="font-semibold text-zinc-300 flex items-center gap-2 mt-1 hover:underline hover:text-zinc-200">
             <GiClick /> Entre em contato
           </p>
