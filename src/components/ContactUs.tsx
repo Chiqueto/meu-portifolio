@@ -8,7 +8,7 @@ interface ContactUsProps {
 
 export const ContactUs = ({ closeModal }: ContactUsProps) => {
   const form = useRef<HTMLFormElement>(null);
-  const serviceID = import.meta.env.VITE_API_NAME;
+  const serviceID = import.meta.env.VITE_API_SERVICE;
   const templateID = import.meta.env.VITE_API_TEMPLATE;
   const publicKey = import.meta.env.VITE_API_PUBLIC_KEY;
 
