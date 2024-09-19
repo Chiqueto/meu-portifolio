@@ -25,6 +25,7 @@ export const ContactUs = ({ closeModal }: ContactUsProps) => {
         .then(
           () => {
             console.log("SUCCESS!");
+            alert("Mensagem enviada com sucesso!");
           },
           (error) => {
             console.log("FAILED...", error.text);
@@ -63,7 +64,7 @@ export const ContactUs = ({ closeModal }: ContactUsProps) => {
           id="email"
           name="email"
           className="bg-gray-50 border border-gray-300 text-zinc-100 text-sm rounded-lg focus:ring-1 focus:outline-none focus:ring-pink-500 focus:border-pink-500 block w-full p-2.5 bg-transparent mb-2"
-          placeholder="exemplo@mail.com"
+          placeholder="seu email para retornar o contato"
           required
         />
         <label className="text-zinc-50">Mensagem</label>
@@ -76,6 +77,7 @@ export const ContactUs = ({ closeModal }: ContactUsProps) => {
           type="submit"
           value="Enviar"
           className="text-white bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none font-medium rounded-lg text-sm w-full py-2.5 text-center mb-2 cursor-pointer"
+          required
         />
       </form>
     </div>
