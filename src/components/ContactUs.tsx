@@ -35,7 +35,7 @@ export const ContactUs = ({ closeModal }: ContactUsProps) => {
   };
 
   return (
-    <div className="fixed inset-0 bg-black/60 flex items-center justify-center">
+    <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-10">
       <form
         ref={form}
         onSubmit={sendEmail}
