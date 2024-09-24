@@ -1,4 +1,4 @@
-import { ArrowUpRightIcon } from "lucide-react";
+import { GithubIcon, LinkedinIcon } from "lucide-react";
 import { ReactNode } from "react";
 
 interface ProjectData {
@@ -9,7 +9,8 @@ interface ProjectData {
 interface ProjectCardProps {
   image: string;
   title: string;
-  link: string;
+  linkLinkedin: string;
+  linkGithub: string;
   video: ReactNode;
   openProjectVideo: ({ title, video }: ProjectData) => void;
 }
@@ -17,7 +18,8 @@ interface ProjectCardProps {
 const ProjectCard = ({
   image,
   title,
-  link,
+  linkLinkedin,
+  linkGithub,
   video,
   openProjectVideo,
 }: ProjectCardProps) => {
@@ -41,8 +43,11 @@ const ProjectCard = ({
           </p>
           <p className="font-extrabold text-xl text-zinc-50">{title}</p>
         </div>
-        <a target="_blank" href={link}>
-          <ArrowUpRightIcon className="text-zinc-50" />
+        <a target="_blank" href={linkGithub}>
+          <GithubIcon className="text-zinc-50" />
+        </a>
+        <a target="_blank" href={linkLinkedin}>
+          <LinkedinIcon className="text-zinc-50" />
         </a>
       </div>
     </div>

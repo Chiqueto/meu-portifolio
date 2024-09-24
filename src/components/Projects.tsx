@@ -7,17 +7,21 @@ const Projects = () => {
     {
       name: "FSW-Barber",
       image: "fsw-barber.png",
-      link: "#",
+      linkLinkedin: "#",
+      linkGithub: "https://github.com/Chiqueto/fsw-week",
     },
     {
       name: "Plann.er",
       image: "plann.er.png",
-      link: "#",
+      linkLinkedin: "#",
+      linkGithub: "https://github.com/Chiqueto/fsw-week",
     },
     {
       name: "To do List",
       image: "todo.png",
-      link: "https://www.linkedin.com/posts/luis-felipe-chiqueto_nodejs-express-mongodb-activity-7239307696338800640-95C-?utm_source=share&utm_medium=member_desktop",
+      linkLinkedin:
+        "https://www.linkedin.com/posts/luis-felipe-chiqueto_nodejs-express-mongodb-activity-7239307696338800640-95C-?utm_source=share&utm_medium=member_desktop",
+      linkGithub: "https://github.com/Chiqueto/fsw-week",
       video: (
         <iframe
           className="mx-auto w-[320px] h-[180px] sm:w-[720px] sm:h-[405px]"
@@ -72,7 +76,8 @@ const Projects = () => {
             key={project.name}
             image={project.image}
             title={project.name}
-            link={project.link}
+            linkLinkedin={project.linkLinkedin}
+            linkGithub={project.linkGithub}
             video={project.video}
             openProjectVideo={openProjectvideo}
           />
