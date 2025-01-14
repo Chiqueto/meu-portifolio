@@ -1,20 +1,29 @@
 import { ReactNode, useEffect, useState } from "react";
 import ProjectCard from "./ProjectCard";
-import ProjectVideo from "./ProjectVideo";
+import ProjectMain from "./ProjectMain";
 
 const Projects = () => {
   const myProjects = [
-    {
-      name: "FSW-Barber",
-      image: "fsw-barber.png",
-      linkLinkedin: "#",
-      linkGithub: "https://github.com/Chiqueto/fsw-week",
-    },
+    // {
+    //   name: "FSW-Barber",
+    //   image: "fsw-barber.png",
+    //   linkLinkedin: "#",
+    //   linkGithub: "https://github.com/Chiqueto/fsw-week",
+    // },
     {
       name: "Plann.er",
       image: "plann.er.png",
-      linkLinkedin: "#",
+      linkLinkedin: "https://www.linkedin.com/posts/luis-felipe-chiqueto_reactjs-tailwind-rocketseat-activity-7217001306375208960-30aI?utm_source=share&utm_medium=member_desktop",
       linkGithub: "https://github.com/Chiqueto/fsw-week",
+      main: (
+        <div className="sm:h-52   ">
+          <img
+            src="plann.er.png"
+            alt={"Imagem do projeto"}
+            className="rounded-t-2xl object-cover object-top h-full w-full"
+          />
+        </div>
+      ),
     },
     {
       name: "To do List",
@@ -22,7 +31,7 @@ const Projects = () => {
       linkLinkedin:
         "https://www.linkedin.com/posts/luis-felipe-chiqueto_nodejs-express-mongodb-activity-7239307696338800640-95C-?utm_source=share&utm_medium=member_desktop",
       linkGithub: "https://github.com/Chiqueto/fsw-week",
-      video: (
+      main: (
         <iframe
           className="mx-auto w-[320px] h-[180px] sm:w-[720px] sm:h-[405px]"
           src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7239307519758663680?compact=1"
@@ -30,27 +39,42 @@ const Projects = () => {
         ></iframe>
       ),
     },
+    {
+      name: "VirtuaFab",
+      image: "virtuaFab.jpg",
+      linkLinkedin:
+        "https://www.linkedin.com/posts/renan-de-oliveira-silva-416721289_inovaaexaeto-senaigrandprix-realidadeaumentada-ugcPost-7261727290282156032-TzKi?utm_source=share&utm_medium=member_desktop",
+      linkGithub: "#",
+      main: (
+
+        <iframe
+          className="mx-auto w-[320px] h-[180px] sm:w-[720px] sm:h-[405px]"
+          src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7261727290282156032?compact=1"
+          title="Publicação incorporada">
+        </iframe>
+      ),
+    },
   ];
 
   interface ProjectDataProps {
     title: string;
-    video: ReactNode;
+    main: ReactNode;
   }
 
-  const [isProjectVideoOpen, setProjectVideoOpen] = useState(false);
+  const [isProjectMainOpen, setProjectMainOpen] = useState(false);
 
   const [projectData, setProjectData] = useState<ProjectDataProps>();
 
-  function openProjectvideo(data: ProjectDataProps) {
+  function openProjectMain(data: ProjectDataProps) {
     setProjectData(data);
-    setProjectVideoOpen(true);
+    setProjectMainOpen(true);
   }
 
-  function closeProjectvideo() {
-    setProjectVideoOpen(false);
+  function closeProjectMain() {
+    setProjectMainOpen(false);
   }
   useEffect(() => {
-    if (isProjectVideoOpen) {
+    if (isProjectMainOpen) {
       document.body.style.overflow = "hidden"; // Bloqueia o scroll
     } else {
       document.body.style.overflow = "auto"; // Reativa o scroll
@@ -60,7 +84,7 @@ const Projects = () => {
     return () => {
       document.body.style.overflow = "auto";
     };
-  }, [isProjectVideoOpen]);
+  }, [isProjectMainOpen]);
 
   return (
     <section
@@ -78,16 +102,16 @@ const Projects = () => {
             title={project.name}
             linkLinkedin={project.linkLinkedin}
             linkGithub={project.linkGithub}
-            video={project.video}
-            openProjectVideo={openProjectvideo}
+            main={project.main}
+            openProjectMain={openProjectMain}
           />
         ))}
-        {isProjectVideoOpen && (
-          <ProjectVideo
+        {isProjectMainOpen && (
+          <ProjectMain
             key={projectData?.title}
             title={projectData?.title}
-            closeProjectVideo={closeProjectvideo}
-            video={projectData?.video}
+            closeProjectMain={closeProjectMain}
+            main={projectData?.main}
           />
         )}
       </div>

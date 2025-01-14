@@ -1,17 +1,17 @@
 import { X } from "lucide-react";
 import { ReactNode } from "react";
 
-interface ProjectVideoProps {
+interface ProjectMainProps {
   title: string | undefined;
-  closeProjectVideo: () => void;
-  video: ReactNode;
+  closeProjectMain: () => void;
+  main: ReactNode;
 }
 
-const ProjectVideo = ({
+const ProjectMain = ({
   title,
-  closeProjectVideo,
-  video,
-}: ProjectVideoProps) => {
+  closeProjectMain,
+  main,
+}: ProjectMainProps) => {
   return (
     <div className="fixed inset-0 bg-black/60 flex items-center justify-center">
       <div className="bg-neutral-800 max-w-fit px-5 py-6 -sm mx-auto rounded-2xl flex flex-col  gap-6">
@@ -19,13 +19,13 @@ const ProjectVideo = ({
           <h2 className="text-zinc-50 font-semibold text-2xl">{title}</h2>
           <X
             className="text-zinc-50 size-8 cursor-pointer"
-            onClick={closeProjectVideo}
+            onClick={closeProjectMain}
           />
         </div>
-        {video}
+        {main}
       </div>
     </div>
   );
 };
 
-export default ProjectVideo;
+export default ProjectMain;

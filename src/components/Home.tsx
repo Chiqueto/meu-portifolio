@@ -38,7 +38,7 @@ const Home = () => {
         Olá, me chamo Luís Felipe e sou desenvolvedor
         <strong className="bg-gradient-to-tl to-amber-500 from-fuchsia-600 bg-clip-text text-transparent">
           {" "}
-          Frontend
+          Full Stack
         </strong>
       </h1>
       <div className="flex flex-col lg:flex-row gap-5 items-center">

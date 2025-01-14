@@ -3,7 +3,7 @@ import { ReactNode } from "react";
 
 interface ProjectData {
   title: string;
-  video: ReactNode;
+  main: ReactNode;
 }
 
 interface ProjectCardProps {
@@ -11,8 +11,8 @@ interface ProjectCardProps {
   title: string;
   linkLinkedin: string;
   linkGithub: string;
-  video: ReactNode;
-  openProjectVideo: ({ title, video }: ProjectData) => void;
+  main: ReactNode;
+  openProjectMain: ({ title, main }: ProjectData) => void;
 }
 
 const ProjectCard = ({
@@ -20,13 +20,13 @@ const ProjectCard = ({
   title,
   linkLinkedin,
   linkGithub,
-  video,
-  openProjectVideo,
+  main,
+  openProjectMain,
 }: ProjectCardProps) => {
   return (
     <div
       className="sm:w-2/5 w-full mt-7 mb-10 sm:mb-0 transition-transform duration-300 ease-in-out transform hover:scale-105 hover:cursor-pointer"
-      onClick={() => openProjectVideo({ title, video })}
+      onClick={() => openProjectMain({ title, main })}
     >
       <div className="sm:h-52   ">
         <img
