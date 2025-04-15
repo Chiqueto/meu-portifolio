@@ -3,12 +3,35 @@ import { ContactUs } from "./ContactUs";
 
 const Home = () => {
   const [isContactUsOpen, setIsContactUsOpen] = useState(false);
+  const [age, setAge] = useState<number>(0);
 
   const handleOpenContactUs = () => {
     setIsContactUsOpen(!isContactUsOpen);
   };
 
+  const ageCalculator = () => {
+    const today = new Date();
+    const birthDate = new Date("2005-03-08");
+
+    let age = today.getFullYear() - birthDate.getFullYear();
+
+    if (
+      today.getMonth() < birthDate.getMonth() ||
+      (today.getMonth() === birthDate.getMonth() && today.getDate() < birthDate.getDate())
+    ) {
+      age--;
+    }
+
+    setAge(age);
+
+  }
+
   useEffect(() => {
+    ageCalculator();
+  }, []);
+
+  useEffect(() => {
+
     if (isContactUsOpen) {
       document.body.style.overflow = "hidden";
     } else {
@@ -18,6 +41,7 @@ const Home = () => {
     return () => {
       document.body.style.overflow = "auto";
     };
+
   }, [isContactUsOpen]);
 
   return (
@@ -44,7 +68,7 @@ const Home = () => {
       <div className="flex flex-col lg:flex-row gap-5 items-center">
         <article className="text-zinc-400 text-justify md:text-left pretty text-lg">
           Sou estudante de Engenharia de Software pela UNIFACEF - Franca, tenho
-          19 anos e moro em São Joaquim da Barra. Minha paixão pela área de
+          {" " + age} anos e moro em São Joaquim da Barra. Minha paixão pela área de
           tecnologia surgiu durante o curso técnico em Desenvolvimento de
           Sistemas, onde descobri meu interesse por criar soluções inovadoras.
           Atualmente, estou me especializando em Desenvolvimento Web com React,

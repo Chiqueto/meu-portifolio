@@ -14,7 +14,7 @@ const Projects = () => {
       name: "Plann.er",
       image: "plann.er.png",
       linkLinkedin: "https://www.linkedin.com/posts/luis-felipe-chiqueto_reactjs-tailwind-rocketseat-activity-7217001306375208960-30aI?utm_source=share&utm_medium=member_desktop",
-      linkGithub: "https://github.com/Chiqueto/fsw-week",
+      linkGithub: "https://github.com/Chiqueto/Plann.er",
       main: (
         <div className="sm:h-52   ">
           <img

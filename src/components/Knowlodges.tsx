@@ -1,9 +1,10 @@
-import { DiJavascript, DiMongodb, DiReact } from "react-icons/di";
+import { DiJava, DiJavascript, DiMongodb, DiReact } from "react-icons/di";
 import { FaNodeJs } from "react-icons/fa";
 import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
 import { SiTypescript } from "react-icons/si";
 import { TbSql } from "react-icons/tb";
 import Badge from "./Badge";
+import { BiLogoSpringBoot } from "react-icons/bi";
 
 const Knowlodges = () => {
   const myExperiences = [
@@ -74,6 +75,24 @@ const Knowlodges = () => {
       name: "TailwindCSS",
       image: (
         <RiTailwindCssFill
+          size={40}
+          className="text-zinc-200 hover:text-zinc-50 transition-transform transform duration-300 "
+        />
+      ),
+    },
+    {
+      name: "Java",
+      image: (
+        <DiJava
+          size={40}
+          className="text-zinc-200 hover:text-zinc-50 transition-transform transform duration-300 "
+        />
+      ),
+    },
+    {
+      name: "Spring Boot",
+      image: (
+        <BiLogoSpringBoot
           size={40}
           className="text-zinc-200 hover:text-zinc-50 transition-transform transform duration-300 "
         />
