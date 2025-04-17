@@ -35,9 +35,7 @@ const Contact = () => {
           tecnologia surgiu durante o curso técnico em Desenvolvimento de
           Sistemas, onde descobri meu interesse por criar soluções inovadoras.
           Atualmente, estou me especializando em Desenvolvimento Web com React,
-          além de estudar banco de dados e backend. Meu grande sonho é aplicar
-          essas habilidades para desenvolver aplicações voltadas ao mundo do
-          esporte.
+          além de estudar banco de dados e backend.
         </p>
         <p className="font-semibold text-zinc-300 flex items-center gap-2 mt-6">
           <MdEmail /> lfchiqueto@gmail.com
