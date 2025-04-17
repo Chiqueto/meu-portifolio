@@ -87,10 +87,11 @@ const Home = () => {
         </button>
         <a
           className="border-2 border-zinc-300 text-zinc-300 py-4 sm:px-6 px-3  font-semibold text-lg rounded-full  hover:text-zinc-50 hover:border-zinc-50 text-center"
-          href="https://docs.google.com/document/d/14DDBhwwm5wf76eeB61CwlZoVzkjAIhEaMHf0VqzCuCc/view
-" //https://docs.google.com/document/d/14DDBhwwm5wf76eeB61CwlZoVzkjAIhEaMHf0VqzCuCc/export?format=pdf
+          href="https://drive.google.com/file/d/1_UKDOsvsPBOBX-9TounuUTzAdqDy5WIE/view?usp=sharing
+"
           download={"Luis Felipe Chiqueto - Curriculo.pdf"}
           target="_blank"
+
         >
           Download CV
         </a>
