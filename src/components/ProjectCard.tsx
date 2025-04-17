@@ -1,4 +1,4 @@
-import { GithubIcon, LinkedinIcon } from "lucide-react";
+import { GithubIcon, LinkedinIcon, LinkIcon } from "lucide-react";
 import { ReactNode } from "react";
 
 interface ProjectData {
@@ -9,8 +9,9 @@ interface ProjectData {
 interface ProjectCardProps {
   image: string;
   title: string;
-  linkLinkedin: string;
-  linkGithub: string;
+  linkedinLink: string | null;
+  githubLink: string | null;
+  accessLink: string | null;
   main: ReactNode;
   openProjectMain: ({ title, main }: ProjectData) => void;
 }
@@ -18,9 +19,10 @@ interface ProjectCardProps {
 const ProjectCard = ({
   image,
   title,
-  linkLinkedin,
-  linkGithub,
+  linkedinLink,
+  githubLink,
   main,
+  accessLink,
   openProjectMain,
 }: ProjectCardProps) => {
   return (
@@ -43,12 +45,22 @@ const ProjectCard = ({
           </p>
           <p className="font-extrabold text-xl text-zinc-50">{title}</p>
         </div>
-        <a target="_blank" href={linkGithub}>
-          <GithubIcon className="text-zinc-50" />
-        </a>
-        <a target="_blank" href={linkLinkedin}>
-          <LinkedinIcon className="text-zinc-50" />
-        </a>
+        {githubLink && (
+          <a target="_blank" href={githubLink}>
+            <GithubIcon className="text-zinc-50" />
+          </a>
+        )}
+        {linkedinLink && (
+          <a target="_blank" href={linkedinLink}>
+            <LinkedinIcon className="text-zinc-50" />
+          </a>
+        )}
+        {accessLink && (
+          <a target="_blank" href={accessLink}>
+            <LinkIcon className="text-zinc-50" />
+          </a>
+        )}
+
       </div>
     </div>
   );

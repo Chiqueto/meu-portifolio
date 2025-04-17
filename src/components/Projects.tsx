@@ -7,14 +7,15 @@ const Projects = () => {
     // {
     //   name: "FSW-Barber",
     //   image: "fsw-barber.png",
-    //   linkLinkedin: "#",
-    //   linkGithub: "https://github.com/Chiqueto/fsw-week",
+    //   linkedinLink: "#",
+    //   githubLink: "https://github.com/Chiqueto/fsw-week",
     // },
     {
       name: "Plann.er",
       image: "plann.er.png",
-      linkLinkedin: "https://www.linkedin.com/posts/luis-felipe-chiqueto_reactjs-tailwind-rocketseat-activity-7217001306375208960-30aI?utm_source=share&utm_medium=member_desktop",
-      linkGithub: "https://github.com/Chiqueto/Plann.er",
+      linkedinLink: "https://www.linkedin.com/posts/luis-felipe-chiqueto_reactjs-tailwind-rocketseat-activity-7217001306375208960-30aI?utm_source=share&utm_medium=member_desktop",
+      githubLink: "https://github.com/Chiqueto/Plann.er",
+      accessLink: null,
       main: (
         <div className="sm:h-52   ">
           <img
@@ -28,9 +29,10 @@ const Projects = () => {
     {
       name: "To do List",
       image: "todo.png",
-      linkLinkedin:
+      linkedinLink:
         "https://www.linkedin.com/posts/luis-felipe-chiqueto_nodejs-express-mongodb-activity-7239307696338800640-95C-?utm_source=share&utm_medium=member_desktop",
-      linkGithub: "https://github.com/Chiqueto/fsw-week",
+      githubLink: "https://github.com/Chiqueto/ToDo",
+      accessLink: null,
       main: (
         <iframe
           className="mx-auto w-[320px] h-[180px] sm:w-[720px] sm:h-[405px]"
@@ -42,9 +44,10 @@ const Projects = () => {
     {
       name: "VirtuaFab",
       image: "virtuaFab.jpg",
-      linkLinkedin:
+      linkedinLink:
         "https://www.linkedin.com/posts/renan-de-oliveira-silva-416721289_inovaaexaeto-senaigrandprix-realidadeaumentada-ugcPost-7261727290282156032-TzKi?utm_source=share&utm_medium=member_desktop",
-      linkGithub: "#",
+      githubLink: null,
+      accessLink: null,
       main: (
 
         <iframe
@@ -52,6 +55,24 @@ const Projects = () => {
           src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7261727290282156032?compact=1"
           title="Publicação incorporada">
         </iframe>
+      ),
+    },
+    {
+      name: "GymLanding",
+      image: "gymLanding.png",
+      linkedinLink: null,
+      githubLink: "https://github.com/Chiqueto/GymLanding",
+      accessLink: "https://gym-landing-black.vercel.app/",
+      main: (
+        <>
+          <div className="hidden md:block w-[600px]"><iframe src="https://gym-landing-black.vercel.app/" className="h-[600px] w-[100%]" width="100%" height="100%"></iframe></div>
+          <iframe
+            className=" md:hidden block mx-auto w-[320px] h-[180px] sm:w-[720px] sm:h-[405px]"
+            src="https://drive.google.com/file/d/1hF7m2_HyaFHK1I7z38lS2IaHDJGu-_Q6/view?usp=sharing"
+            title="Publicação incorporada">
+          </iframe>
+        </>
+
       ),
     },
   ];
@@ -100,8 +121,9 @@ const Projects = () => {
             key={project.name}
             image={project.image}
             title={project.name}
-            linkLinkedin={project.linkLinkedin}
-            linkGithub={project.linkGithub}
+            linkedinLink={project.linkedinLink}
+            githubLink={project.githubLink}
+            accessLink={project.accessLink}
             main={project.main}
             openProjectMain={openProjectMain}
           />
