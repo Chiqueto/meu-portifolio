@@ -72,9 +72,7 @@ const Home = () => {
           tecnologia surgiu durante o curso técnico em Desenvolvimento de
           Sistemas, onde descobri meu interesse por criar soluções inovadoras.
           Atualmente, estou me especializando em Desenvolvimento Web com React,
-          além de estudar banco de dados e backend. Meu grande sonho é aplicar
-          essas habilidades para desenvolver aplicações voltadas ao mundo do
-          esporte.
+          além de estudar banco de dados e backend.
         </article>
         <img src="computer.svg" alt="computer" className="sm:w-[250px] w-52" />
       </div>
