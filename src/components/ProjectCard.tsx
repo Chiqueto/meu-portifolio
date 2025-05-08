@@ -4,6 +4,7 @@ import { ReactNode } from "react";
 interface ProjectData {
   title: string;
   main: ReactNode;
+
 }
 
 interface ProjectCardProps {
@@ -13,6 +14,7 @@ interface ProjectCardProps {
   githubLink: string | null;
   accessLink: string | null;
   main: ReactNode;
+  imagePosition?: string;
   openProjectMain: ({ title, main }: ProjectData) => void;
 }
 
@@ -23,6 +25,7 @@ const ProjectCard = ({
   githubLink,
   main,
   accessLink,
+  imagePosition,
   openProjectMain,
 }: ProjectCardProps) => {
   return (
@@ -34,7 +37,7 @@ const ProjectCard = ({
         <img
           src={image}
           alt={title}
-          className="rounded-t-2xl object-cover object-top h-full w-full"
+          className={`rounded-t-2xl object-cover object-${imagePosition ? imagePosition : "top"} h-full w-full`}
         />
       </div>
 
